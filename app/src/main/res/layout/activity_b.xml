@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityB"
     android:background="#0f4e55"
-    >
+    tools:context=".ActivityB">
 
     <TextView
         android:id="@+id/textView2"
@@ -20,16 +19,27 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="57dp" />
 
-<!--    <Button-->
-<!--        android:id="@+id/switchActivityB"-->
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="64dp"-->
-<!--        android:layout_marginStart="4dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:onClick="switchActivity"-->
-<!--        android:padding="20sp"-->
-<!--        android:text="Back"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="304dp"
+        android:onClick="finishActivity"
+        android:text="Finish activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/switchActivityB"-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="64dp"-->
+    <!--        android:layout_marginStart="4dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:onClick="switchActivity"-->
+    <!--        android:padding="20sp"-->
+    <!--        android:text="Back"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

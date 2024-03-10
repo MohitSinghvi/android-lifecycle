@@ -20,21 +20,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.e("onCreate ------", "Main OnCreate");
     }
 
+    public void onStart(){
+        super.onStart();
+        Log.e("onStart ------", "Main OnStart");
+    }
+
+
     public void switchActivityB(View view){
+        counter+=5;
         Intent intent = new Intent(MainActivity.this, ActivityB.class);
         startActivity(intent);
     }
 
     public void switchActivityC(View view){
+        counter+=10;
         Intent intent = new Intent(MainActivity.this, ActivityC.class);
         startActivity(intent);
     }
 
     public void openDialog(View view) {
-        //ExampleDialog exampleDialog=new ExampleDialog();
-        //ExampleDialogexampleDialogmpleDialog.show(getSupportFragmentManager(),"example dialog");
         Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.activity_dialog);
         dialog.setTitle("Dialog is opened");
@@ -44,22 +51,33 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-//        this.counterR++;
-//        TextView textView = (TextView) findViewById(R.id.textViewR);
-//        textView.setText("OnResume Counter: " + counterR);
-//        Log.e("onResume ------ ","MainActivity: onResume()");
+
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        this.counter+=5;
         TextView textView = (TextView) findViewById(R.id.textViewR);
         textView.setText(""+counter);
-        Log.e("onRestart ------ ","MainActivity: onRestart()");
+        Log.e("onRestart ------", "Main onRestart");
 
     }
 
+    public void onPause(){
+        super.onPause();
+        Log.e("onPause ------", "Main onPause");
+
+    }
+
+    public void onStop(){
+        super.onStop();
+        Log.e("onStop ------", "Main onStop");
+    }
+
+    public void onDestroy(){
+        super.onDestroy();
+        Log.e("onDestroy ------", "Main onDestroy");
+    }
     public void finishActivityA(){
         MainActivity.this.finish();
     }
